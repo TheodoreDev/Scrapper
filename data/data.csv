@@ -1,4 +1,238 @@
-Username,Favorite
-Test,True
-Test2,False
-Test3,True
+Country,Inhabitants
+Inde,1 407 563 842
+Chine,1 425 893 465
+États-Unis,336 997 624
+Indonésie,273 753 191
+Pakistan,231 402 117
+Brésil,214 326 223
+Nigeria,213 401 323
+Bangladesh,169 356 251
+Russie,145 102 755
+Mexique,126 705 138
+Japon,124 612 530
+Éthiopie,120 283 026
+Philippines,113 880 328
+Égypte,109 262 178
+Viêt Nam,97 468 029
+République démocratique du Congo,95 894 118
+Iran,87 923 432
+Turquie,84 775 404
+Allemagne,83 408 554
+Thaïlande,71 601 103
+Royaume-Uni,67 281 039
+France,64 531 444
+Tanzanie,63 588 334
+Afrique du Sud,59 392 255
+Italie,59 240 329
+Birmanie,53 798 084
+Kenya,53 005 614
+Corée du Sud,51 830 139
+Colombie,51 516 562
+Espagne,47 486 935
+Ouganda,45 853 778
+Soudan,45 657 202
+Argentine,45 276 780
+Algérie,44 177 969
+Irak,43 533 592
+Ukraine,43 531 422
+Afghanistan,40 099 462
+Pologne,38 307 726
+Canada,38 155 012
+Maroc,37 076 584
+Arabie saoudite,35 950 396
+Angola,34 503 774
+Ouzbékistan,34 081 449
+Pérou,33 715 471
+Malaisie,33 573 874
+Yémen,32 981 641
+Ghana,32 833 031
+Mozambique,32 077 072
+Népal,30 034 989
+Madagascar,28 915 653
+Venezuela,28 199 867
+Côte d'Ivoire,27 478 249
+Cameroun,27 198 628
+Corée du Nord,25 971 909
+Australie,25 921 089
+Niger,25 252 722
+Taïwan,23 859 912
+Burkina Faso,22 100 683
+Mali,21 904 983
+Sri Lanka,21 773 441
+Syrie,21 324 367
+Malawi,19 889 742
+Chili,19 493 184
+Zambie,19 473 125
+Roumanie,19 328 560
+Kazakhstan,19 196 465
+Équateur,17 797 737
+Guatemala,17 608 483
+Pays-Bas,17 501 696
+Tchad,17 179 740
+Somalie,17 065 581
+Sénégal,16 876 720
+Cambodge,16 589 023
+Zimbabwe,15 993 524
+Guinée,13 531 906
+Rwanda,13 461 888
+Bénin,12 996 895
+Burundi,12 551 213
+Tunisie,12 262 946
+Bolivie,12 079 472
+Belgique,11 611 419
+Haïti,11 447 569
+Cuba,11 256 372
+Jordanie,11 148 278
+République dominicaine,11 117 873
+Soudan du Sud,10 748 272
+Tchéquie,10 510 751
+Suède,10 467 097
+Grèce,10 445 365
+Azerbaïdjan,10 312 992
+Portugal,10 290 103
+Honduras,10 278 345
+Papouasie-Nouvelle-Guinée,9 949 437
+Tadjikistan,9 750 064
+Hongrie,9 709 786
+Biélorussie,9 578 167
+Émirats arabes unis,9 365 145
+Autriche,8 922 082
+Israël,8 900 059
+Suisse,8 691 406
+Togo,8 644 829
+Sierra Leone,8 420 641
+Hong Kong,7 494 578
+Laos,7 425 057
+Serbie,7 296 769
+Bulgarie,6 885 868
+Nicaragua,6 850 540
+Libye,6 735 277
+Paraguay,6 703 799
+Kirghizistan,6 527 743
+Turkménistan,6 341 855
+Salvador,6 314 167
+Singapour,5 941 060
+Danemark,5 854 240
+République du Congo,5 835 806
+Liban,5 592 631
+Finlande,5 535 992
+République centrafricaine,5 457 154
+Slovaquie,5 447 622
+Norvège,5 403 021
+Liberia,5 193 416
+Costa Rica,5 153 957
+Palestine,5 133 392
+Nouvelle-Zélande,5 129 727
+Irlande,4 986 526
+Mauritanie,4 614 974
+Oman,4 520 471
+Panama,4 351 267
+Koweït,4 250 114
+Croatie,4 060 135
+Géorgie,3 757 980
+Érythrée,3 620 312
+Uruguay,3 426 260
+Mongolie,3 347 782
+Bosnie-Herzégovine,3 270 943
+Porto Rico,3 256 028
+Moldavie,3 061 506
+Albanie,2 854 710
+Jamaïque,2 827 695
+Arménie,2 790 974
+Lituanie,2 786 651
+Qatar,2 688 235
+Gambie,2 639 916
+Botswana,2 588 423
+Namibie,2 530 151
+Gabon,2 341 179
+Lesotho,2 281 454
+Slovénie,2 119 410
+Macédoine du Nord,2 103 330
+Guinée-Bissau,2 060 721
+Lettonie,1 873 919
+Kosovo,1 662 009
+Guinée équatoriale,1 634 466
+Trinité-et-Tobago,1 525 663
+Bahreïn,1 463 265
+Estonie,1 328 701
+Timor oriental,1 320 942
+Maurice,1 298 915
+Chypre,1 244 188
+Eswatini,1 192 271
+Djibouti,1 105 557
+La Réunion,966 129
+Fidji,924 610
+Comores,821 625
+Guyana,804 567
+Bhoutan,777 486
+Îles Salomon,707 851
+Macao,686 607
+Luxembourg,639 321
+Monténégro,627 859
+Suriname,612 985
+Cap-Vert,587 925
+Malte,565 581
+Maldives,526 748
+Brunei,521 457
+Bahamas,445 373
+Belize,407 906
+Guadeloupe,400 031
+Islande,396 051
+Martinique,370 335
+Vanuatu,368 796
+Mayotte,319 137
+Polynésie française,316 014
+Guyane,304 032
+Nouvelle-Calédonie,297 449
+Barbade,287 800
+Sao Tomé-et-Principe,281 200
+Samoa,223 107
+Curaçao,218 764
+Sainte-Lucie,190 338
+Guam,179 651
+Kiribati,170 534
+Grenade,128 874
+États fédérés de Micronésie,124 610
+Jersey,113 131
+Aruba,109 618
+Seychelles,106 537
+Tonga,106 471
+Saint-Vincent-et-les-Grenadines,106 017
+Îles Vierges des États-Unis,104 332
+Îles Vierges des États-Unis,100 091
+Antigua-et-Barbuda,93 219
+Île de Man,84 263
+Andorre,79 034
+Dominique,72 412
+Îles Caïmans,68 136
+Bermudes,64 185
+Guernesey,63 065
+Groenland,56 243
+Îles Féroé,52 889
+Îles Mariannes du Nord,49 481
+Saint-Christophe-et-Niévès,47 606
+Îles Turques-et-Caïques,45 114
+Samoa américaines,45 035
+Saint-Martin,44 042
+Îles Marshall,42 050
+Liechtenstein,39 039
+Monaco,36 686
+Saint-Marin,33 745
+Gibraltar,32 669
+Saint-Martin,31 948
+Îles Vierges britanniques,31 122
+Pays-Bas caribéens,26 706
+Palaos,18 024
+Îles Cook,17 003
+Anguilla,15 753
+Nauru,12 511
+Wallis-et-Futuna,11 627
+Tuvalu,11 204
+Saint-Barthélemy,10 861
+Saint-Pierre-et-Miquelon,5 883
+"Sainte-Hélène, Ascension et Tristan da Cunha",5 404
+Montserrat,4 417
+Malouines,3 764
+Niue,1 937
+Tokelau,1 849
+Vatican,511
