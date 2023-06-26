@@ -40,10 +40,14 @@ while True:
     number_country = len(Country)
 
     for i in range(number_country):
-        url2 = f'https://fr.wikipedia.org/wiki/{Country[i]}'
+        if Country[i] == "Équateur":
+            url2 = 'https://fr.wikipedia.org/wiki/%C3%89quateur_(pays)'
+        else:
+            url2 = f'https://fr.wikipedia.org/wiki/{Country[i]}'
 
         response2 = requests.get(url2)
         ahref = []
+        ahref2 = []
 
         if response2.ok:
             soup2 = BeautifulSoup(response2.text, 'html.parser')
@@ -56,8 +60,16 @@ while True:
                 idhi = idhi1.text.strip()
                 idhi_final = idhi[0:5]
             except Exception as e:
-                idhi_final = None
+                try:
+                    soup2 = BeautifulSoup(response2.text, 'html.parser')
+                    sups = soup2.find('sup', attrs={'id': 'cite_ref-hdr2021-22_7-1'})
+                    idhi1 = sups.find_parent('td')
+                    idhi = idhi1.text.strip()
+                    idhi_final = idhi[0:5]
+                except Exception as e:
+                    idhi_final = None
             IDHI.append(idhi_final)
+            print(Country[i] + ' : ' + str(idhi_final))
 
 
     with open(dataFile, "w", newline="") as csv_file:
@@ -67,4 +79,3 @@ while True:
             writer.writerow([f"{Country[i]}", f"{Inhabitants[i]}", f"{IDHI[i]}"])
 
     print("update")
-    time.sleep(2)
