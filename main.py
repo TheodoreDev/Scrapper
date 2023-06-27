@@ -48,6 +48,8 @@ while True:
         response2 = requests.get(url2)
         ahref = []
         ahref2 = []
+        tr_index = []
+        idhi_final = None
 
         if response2.ok:
             soup2 = BeautifulSoup(response2.text, 'html.parser')
@@ -62,10 +64,23 @@ while True:
             except Exception as e:
                 try:
                     soup2 = BeautifulSoup(response2.text, 'html.parser')
-                    sups = soup2.find('sup', attrs={'id': 'cite_ref-hdr2021-22_7-1'})
-                    idhi1 = sups.find_parent('td')
-                    idhi = idhi1.text.strip()
-                    idhi_final = idhi[0:5]
+                    caps = soup2.findAll('caption', attrs={'style': 'background-color:#e3e3e3;'})
+                    for cap in caps:
+                        if cap.text == "Développement":
+                            table_children = cap
+                            table = table_children.find_parent('table')
+                            tbody = table.find('tbody')
+                            trs = tbody.findAll('tr')
+                            for tr in trs:
+                                tr_index.append(tr)
+                            tr_good = tr_index[1]
+                            th = tr_good.find('th')
+                            if th.find('a').text == "IDHI":
+                                td = tr_good.find('td')
+                                idhi = td.text.strip()
+                                idhi_final = idhi[0:5]
+                            else:
+                                idhi_final = None
                 except Exception as e:
                     idhi_final = None
             IDHI.append(idhi_final)
