@@ -6,11 +6,12 @@ from bs4 import BeautifulSoup
 
 while True:
     dataFile = "data/data.csv"
-    header = ["Country", "Inhabitants", "IDHI"]
+    header = ["Country", "Inhabitants", "IDHI", "PIB /hab"]
 
     Country = []
     Inhabitants = []
     IDHI = []
+    PIB = []
     ii = 0
 
     url = 'https://fr.wikipedia.org/wiki/Liste_des_pays_par_population'
@@ -42,6 +43,8 @@ while True:
     for i in range(number_country):
         if Country[i] == "Équateur":
             url2 = 'https://fr.wikipedia.org/wiki/%C3%89quateur_(pays)'
+        elif Country[i] == "Irlande":
+            url2 = 'https://fr.wikipedia.org/wiki/Irlande_(pays)'
         else:
             url2 = f'https://fr.wikipedia.org/wiki/{Country[i]}'
 
@@ -49,7 +52,9 @@ while True:
         ahref = []
         ahref2 = []
         tr_index = []
+        tr_index2 = []
         idhi_final = None
+        pib_final = None
 
         if response2.ok:
             soup2 = BeautifulSoup(response2.text, 'html.parser')
@@ -84,13 +89,36 @@ while True:
                 except Exception as e:
                     idhi_final = None
             IDHI.append(idhi_final)
-            print(Country[i] + ' : ' + str(idhi_final))
+
+            try:
+                soup3 = BeautifulSoup(response2.text, 'html.parser')
+                caps2 = soup3.findAll('caption', attrs={'style': 'background-color:#e3e3e3;'})
+                for cap in caps2:
+                    if cap.text == "Économie":
+                        table_children2 = cap
+                        table2 = table_children2.find_parent('table')
+                        tbody2 = table2.find('tbody')
+                        trs2 = tbody2.findAll('tr')
+                        for tr in trs2:
+                            tr_index2.append(tr)
+                        tr_good2 = tr_index2[2]
+                        th2 = tr_good2.find('th')
+                        if th2.find('a').text == "PIB nominal":
+                            td2 = tr_good2.find('td')
+                            pib = td2.text.strip().replace("dollars", "$").split('$')
+                            pib_final = pib[0].replace("de", "").strip().replace(",", ".")
+                        else:
+                            pib_final = None
+            except Exception as e:
+                pib_final = None
+            PIB.append(pib_final)
+            print(Country[i] + " : " + str(pib_final))
 
 
     with open(dataFile, "w", newline="") as csv_file:
         writer = csv.writer(csv_file, delimiter=",")
         writer.writerow(header)
         for i in range(number_country):
-            writer.writerow([f"{Country[i]}", f"{Inhabitants[i]}", f"{IDHI[i]}"])
+            writer.writerow([f"{Country[i]}", f"{Inhabitants[i]}", f"{IDHI[i]}", f"{PIB[i]}"])
 
     print("update")
