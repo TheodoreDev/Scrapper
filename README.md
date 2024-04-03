@@ -7,7 +7,7 @@ This scrapper use the wikipedia page about the contry to make a csv file with al
 ### Dependencies
 
 * Windows 10, 11 or more
-* python 3.9 with pygame, pytmx and pyscroll
+* python 3.9 with beautiful soup
 
 ### How to start the program
 
